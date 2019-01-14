@@ -1,0 +1,39 @@
+.title_cls2{
+    font-variant-caps: petite-caps;
+    font-size: 30px;
+    color: #4CAF50;
+    text-align: left;
+}
+
+.bg_color1 { 
+    background-color: darkcyan;
+    color: lightcyan;
+}
+
+.bg_color2, .list-group-item { 
+    background-color: lightcyan;
+    color: grey;
+}
+
+.margin {
+    margin-bottom: 15px;
+}
+
+.cellhead {
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: darkcyan;
+    color: lightcyan;
+
+}
+
+.img-exprnce {
+    padding-left: 10px;
+    width: 32px;
+    height: 17px;
+}

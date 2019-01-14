@@ -1,0 +1,66 @@
+<div class="container-fluid bg_color1 text-center">
+  <header>
+    <h3 class="margin">Contact Me</h3>
+  </header>
+</div>
+<div class="container-fluid bg_color2">
+  <form [formGroup]="myForm" (submit)="submit()">
+
+    <div class="form-group row">
+      <label for="name" class="col-md-4 col-form-label" style="color: darkcyan;padding-top: 10px;font-size: 15px;text-align: initial"> Name:</label>
+      <div class="col-md-8">
+
+        <input type="text" style="color:black;margin: 10px" id="name" required name="name" formControlName="name" placeholder="Enter Name">
+
+        <p class="text-danger" *ngIf="myForm.controls['name'].invalid">
+          Name is Required
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="mobile" class="col-md-4 col-form-label" style="color: darkcyan;padding-top: 10px;font-size: 15px;text-align: initial"> Mobile:</label>
+      <div class="col-md-8">
+
+        <input type="text" style="color:black;margin: 10px" id="mobile" required name="mobile" formControlName="mobile" placeholder="Enter Mobile Number">
+
+        <p class="text-danger" *ngIf="myForm.controls['mobile'].invalid">
+          Mobile Number is Required
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="email" class="col-md-4 col-form-label" style="color: darkcyan;padding-top: 10px;font-size: 15px;text-align: initial"> Email Id:</label>
+      <div class="col-md-8">
+
+        <input type="text" style="color:black;margin: 10px" id="email" required name="email" formControlName="email" placeholder="Enter Email">
+
+        <p class="text-danger" *ngIf="myForm.controls['email'].invalid">
+          Email is Required
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="remarks" class="col-md-4 col-form-label" style="color: darkcyan;padding-top: 10px;font-size: 15px;text-align: initial"> Remarks:</label>
+      <div class="col-md-8">
+
+        <input type="text" style="color:black;margin: 10px" id="remarks" required name="remarks" formControlName="remarks" placeholder="Enter Remarks">
+
+        <p class="text-danger" *ngIf="myForm.controls['remarks'].invalid">
+          Remarks is Required
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <input type="submit" class="btn btn-success btn-lg" [disabled]="myForm.invalid" style="background-color: darkcyan;border-color: darkcyan;color: white"
+          value="Submit" />
+      </div>
+    </div>
+
+  </form>
+</div>

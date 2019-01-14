@@ -1,0 +1,106 @@
+<div class="container-fluid bg_color1 text-center">
+  <header>
+    <h3 class="margin">Experience</h3>
+  </header>
+</div>
+<div class="container-fluid bg_color2">
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default cellhead bg_color2">
+      <div class="panel-heading cellhead">
+        <h4 class="panel-title">
+          <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">-->
+          Experience Summary
+        </h4>
+      </div>
+      <div id="collapse1">
+        <div class="panel-body">Over 9 years of experience in developing web applications using J2EE Technologies (Java, Servlets, JSP, Struts, Spring,
+          Hibernate, Webservices and EJB) in real time environment. Highly proactive, initiative team player, having successfully
+          executed projects across various time zones. Strong analytical, diagnostic, troubleshooting and communication skills.</div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default cellhead bg_color2">
+      <div class="panel-heading cellhead">
+        <h4 class="panel-title">
+          <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">-->
+          Experience Details
+        </h4>
+      </div>
+      <div class="panel-body">
+        <ul id="expdtls">
+          <li *ngFor="let expdtl of expDetails">
+            {{expdtl}}
+            <img src="assets/images/trashcan.png" class="img-exprnce" onclick="$(this).closest('li').remove();" />
+          </li>
+        </ul>
+        <div *ngIf="!isExpHidden" id="adddetails" style="display:block; padding-left: 10px">
+          <textarea id="addexpdtls" [(ngModel)]="newExpText" style="width:30%"></textarea>
+          <button type="button" id="saveExp" (click)="saveExp()" class="btn btn-info btn-md" style="background-color: darkcyan;border-color: darkcyan; margin: 10px"> Save </button>
+        </div>
+      </div>
+      <div class="panel-footer bg_color2">
+        <button type="button" [disabled]="!isExpHidden" id="addExp" (click)="addExpDls()" class="btn btn-info btn-md" style="background-color: darkcyan;border-color: darkcyan">+</button>
+      </div>
+    </div>
+
+
+
+    <div class="panel panel-default cellhead bg_color2">
+      <div class="panel-heading cellhead">
+        <h4 class="panel-title">
+          <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">-->
+          Educational Qualification
+        </h4>
+      </div>
+      <div id="collapse3">
+        <ul id="quali">
+          <li *ngFor="let qual of qualDetails">
+            {{qual}}
+            <img src="assets/images/trashcan.png" class="img-exprnce" onclick="$(this).closest('li').remove();" />
+          </li>
+        </ul>
+        <div *ngIf="!isQualHidden" id="addQdetails" style="display:block; padding-left: 10px">
+          <textarea id="addQualdtls" [(ngModel)]="newQualText" style="width:30%"></textarea>
+          <button type="button" id="addQual" (click)="saveQual()" class="btn btn-info btn-md" style="background-color: darkcyan;border-color: darkcyan; margin: 10px"> Save </button>
+        </div>
+        <div class="panel-footer bg_color2">
+          <button type="button" id="addQuali" [disabled]="!isQualHidden" (click)="addQualDls()" class="btn btn-info btn-md" style="background-color: darkcyan;border-color: darkcyan">+</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="panel panel-default cellhead bg_color2">
+      <div class="panel-heading cellhead">
+        <h4 class="panel-title">
+          <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">-->
+          Skill Set
+        </h4>
+      </div>
+      <div id="collapse4">
+        <div class="panel-body">
+          <table border="1" style="border-collapse: collapse">
+            <tr>
+              <td style="padding-top: 30px"><b>Web Technologies & Frameworks: </b></td>
+              <td style="padding-top: 30px">J2EE, Rest Services, Hibernate, Spring, ReactJS, JUnit, HTML, XML, Java Script, Servlet, iReport, Redis, PCF
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 30px"><b>Development Tools: </b></td>
+              <td style="padding-top: 30px">Eclipse, IntelliJ, Spring Tool Suite</td>
+            </tr>
+            <tr>
+              <td style="padding-top: 30px"><b>Version Control Systems: </b></td>
+              <td style="padding-top: 30px">GIT, Accurev, SVN, CVS</td>
+            </tr>
+            <tr>
+              <td style="padding-top: 30px"><b>Build Tools: </b></td>
+              <td style="padding-top: 30px">Maven, Jenkins</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

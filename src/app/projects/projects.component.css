@@ -1,0 +1,21 @@
+.cellhead {
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+
+.img-exprnce {
+    padding-left: 10px;
+    width: 32px;
+    height: 17px;
+}
+
+.bg_color1 { 
+    background-color: darkcyan;
+    color: lightcyan;
+}
+
+.bg_color2, .list-group-item { 
+    background-color: lightcyan;
+    color: grey;
+}

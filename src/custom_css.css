@@ -1,0 +1,94 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:10px solid white;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: darkgreen;
+}
+
+.active {
+    background-color: darkgreen;
+}
+
+.home{
+    float: right;
+    padding-right: 155px;
+    margin-top: 84px;
+    background-color: #333;
+}
+
+div > a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: darkgreen;
+}
+
+div > a:hover:not(.active){
+    background-color: #111;
+}
+
+.title_cls{
+    font-variant-caps: petite-caps;
+    font-size: 30px;
+    color: darkgreen;
+    text-align: center;
+}
+
+.iframe_cls{
+    background-color: lightgrey;
+    width: 1872px;
+    height: 700px;
+    border: none;
+}
+
+.button {
+    background-color: maroon;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.bg-color{
+    background-color: black;
+    color: grey;
+}
+
+.iframe-cls2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
